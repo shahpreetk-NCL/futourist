@@ -1,7 +1,9 @@
 import {useState} from 'react';
+import { useNavigate } from "react-router-dom";
 import { planets } from '../data/planets.js'
 
 function Home() {
+  const navigate = useNavigate()
   const [fromPlanet, setFromPlanet] = useState(null);
   const [toPlanet, setToPlanet] = useState(null);
   const [day, setDay] = useState(null);
@@ -14,6 +16,7 @@ function Home() {
     localStorage.setItem('fromPlanet', fromPlanet);
     localStorage.setItem('toPlanet', toPlanet);
     localStorage.setItem('date', `${day} ${month} ${year}`);
+    navigate('/options');
   }
 
   return (
@@ -32,7 +35,7 @@ function Home() {
           {
             planets.map((planet) => (
               <div key={planet.id}>
-                <button onClick={() => setFromPlanet(planet.name)} className="focus:border-8 focus:border-primary rounded-xl mx-auto">
+                <button onClick={() => setFromPlanet(planet.name)} className="focus:border-8 focus:border-primary rounded-xl mx-auto hover:border-secondary hover:border-2">
                   <figure><img className="rounded-xl object-contain " src={`/images/${planet.image}`} alt="Titan" width={150} /></figure>
                 </button>
               </div>
@@ -45,8 +48,9 @@ function Home() {
           {
             planets.map((planet) => (
               <div key={10+planet.id}>
-                <button onClick={() => setToPlanet(planet.name)} className="focus:border-8 focus:border-primary rounded-xl mx-auto">
+                <button onClick={() => setToPlanet(planet.name)} className="focus:border-8 focus:border-primary rounded-xl mx-auto hover:border-secondary hover:border-2">
                   <figure><img className="rounded-xl object-contain " src={`/images/${planet.image}`} alt="Titan" width={150} /></figure>
+                  <button className="hidden hover:block">{planet.name}</button>
                 </button>
               </div>
             ))
@@ -90,13 +94,13 @@ function Home() {
             </div>
           </div>
           <div>
-            <span className="label-text text-accent">from 1 January 2150 to 31 December 2250</span>
+            <span className="label-text text-accent mt-2">from 1 January 2150 to 31 December 2250</span>
             </div>
         </div>
         <div className="text-end mb-4">
-          <button onClick={onSubmit} className="btn btn-secondary btn-md">
-            Next <span className="text-xl">&#10148;</span>
-          </button>
+          <button aria-label="Next Page" onClick={onSubmit} className="btn btn-secondary btn-md">
+            Next Page &nbsp; <span className="text-xl align-top">&#10148;</span>
+            </button>
         </div>
       </div>
     </>
