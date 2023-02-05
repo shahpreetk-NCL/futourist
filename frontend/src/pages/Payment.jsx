@@ -4,12 +4,12 @@ import axios from "axios";
 
 function Payment() {
   const navigate = useNavigate();
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
   const [success, setSuccess] = useState(false);
 
   const sendMessage = (e) => {
     setSuccess(false);
-    console.log("Sending Message");
+    console.log("Sending Message", mobileNumber);
     axios.post("http://localhost:5010/api/sendMessage", {
       fromPlanet: localStorage.getItem("fromPlanet"),
       toPlanet: localStorage.getItem("toPlanet"),
@@ -19,7 +19,7 @@ function Payment() {
       time: localStorage.getItem("time"),
       noOfPeople: localStorage.getItem("noOfPeople"),
       name: localStorage.getItem("name"),
-      phoneNumber: phoneNumber,
+      phoneNumber: mobileNumber,
     }).then((res) => {
       console.log(res.status + " " + res.statusText);
     }).catch((err) => {
@@ -114,7 +114,7 @@ function Payment() {
                     <span className="label-text">Mobile Number</span>
                   </label>
                   <input
-                    type="text"  onChange={(e) => setPhoneNumber(e.target.value)}
+                    type="text" value={mobileNumber} onChange={(e) => setMobileNumber(e.target.value)}
                     placeholder="+447483958294"
                     className="input input-bordered"
                     />

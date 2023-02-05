@@ -11,6 +11,7 @@ function Home() {
   const [year, setYear] = useState(2150);
 
   const onSubmit = (e) => {
+    e.preventDefault();
     localStorage.setItem('fromPlanet', fromPlanet);
     localStorage.setItem('toPlanet', toPlanet);
     localStorage.setItem('date', `${day} ${month} ${year}`);

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function TravelOptions() {
@@ -9,6 +9,9 @@ function TravelOptions() {
   const [time, setTime] = useState(0);
   const [noOfPeople, setNoOfPeople] = useState(1);
   const [price, setPrice] = useState(0);
+
+  useEffect(() => {
+  }, [])
 
   function saveBookingDetails(flight, time, price) {
     setFlightName(flight);
@@ -145,7 +148,7 @@ function TravelOptions() {
           <h2 className="text-3xl my-6">Total Amount: {price} crypto coins</h2>
           <button
             aria-label="Next Page"
-            onClick={onSubmit}
+            onClick={(e) => onSubmit(e)}
             className="btn btn-secondary btn-md"
           >
             Next Page &nbsp; <span className="text-xl align-top">&#10148;</span>
