@@ -49,7 +49,7 @@ function Home() {
                   <img
                     className="rounded-xl object-contain "
                     src={`/images/${planet.image}`}
-                    alt="Titan"
+                    alt={`${planet.name}`}
                     width={150}
                   />
                 </figure>
