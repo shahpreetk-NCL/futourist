@@ -5,7 +5,7 @@ Futourist is a website to plan your trip to other planets in future. Using Futor
 ## Table of Contents
 * [Title](#futurist)
 * [Description](#description)
-* [Tech Used](#tech used)
+* [Tech](#tech)
 
 ## Description
 
@@ -15,4 +15,5 @@ Since the design is futuristic the dates will be from 2150. We have also created
 ## Tech Used
 
 **Frontend:** React, Daisy UI (a Tailwind CSS plugin)
+
 **Backend:** Node.js, twilio for sending messages/booking details
