@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/futourist/static/css/main.31e67607.css",
-    "main.js": "/futourist/static/js/main.74bb0daf.js",
+    "main.js": "/futourist/static/js/main.fcd69bab.js",
     "index.html": "/futourist/index.html",
     "main.31e67607.css.map": "/futourist/static/css/main.31e67607.css.map",
-    "main.74bb0daf.js.map": "/futourist/static/js/main.74bb0daf.js.map"
+    "main.fcd69bab.js.map": "/futourist/static/js/main.fcd69bab.js.map"
   },
   "entrypoints": [
     "static/css/main.31e67607.css",
-    "static/js/main.74bb0daf.js"
+    "static/js/main.fcd69bab.js"
   ]
 }
