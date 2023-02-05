@@ -4,8 +4,29 @@ import axios from "axios";
 
 function Payment() {
   const navigate = useNavigate();
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [success, setSuccess] = useState(false);
 
+  const sendMessage = (e) => {
+    setSuccess(false);
+    console.log("Sending Message");
+    axios.post("http://localhost:5010/api/sendMessage", {
+      fromPlanet: localStorage.getItem("fromPlanet"),
+      toPlanet: localStorage.getItem("toPlanet"),
+      date: localStorage.getItem("date"),
+      price: localStorage.getItem("price"),
+      flight: localStorage.getItem("flight"),
+      time: localStorage.getItem("time"),
+      noOfPeople: localStorage.getItem("noOfPeople"),
+      name: localStorage.getItem("name"),
+      phoneNumber: phoneNumber,
+    }).then((res) => {
+      console.log(res.status + " " + res.statusText);
+    }).catch((err) => {
+      console.log(err);
+    });
+    navigate('/')
+  }
 
   return (
     <>
@@ -93,7 +114,7 @@ function Payment() {
                     <span className="label-text">Mobile Number</span>
                   </label>
                   <input
-                    type="text"
+                    type="text"  onChange={(e) => setPhoneNumber(e.target.value)}
                     placeholder="+447483958294"
                     className="input input-bordered"
                     />
@@ -102,7 +123,7 @@ function Payment() {
 
               </div>
               <div className="text-end m-6">
-                <button className="btn btn-primary" onClick={() => navigate('/')}>Send Message</button>
+                <button className="btn btn-primary" onClick={(e) => sendMessage(e)}>Send Message</button>
               </div>
             </div>
           </div>
