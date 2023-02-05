@@ -12,7 +12,7 @@ router.post("/", (req, res) => {
   console.log(req.body);
   client.messages
     .create({
-      body: `Thank you for booking with Futourist. Here are your booking details - Name: ${req.body.name}, Date: ${req.body.date}, Time of Departure: ${req.body.time}, Number of people: ${req.body.noOfPeople}, From: ${req.body.fromPlanet}, To: ${req.body.toPlanet}`,
+      body: `Thank you for booking with Futourist. Here are your booking details - Name: ${req.body.name}, Departure Date: ${req.body.date}, Time of Departure: ${req.body.time}, Number of travellers: ${req.body.noOfPeople}, From: ${req.body.fromPlanet}, To: ${req.body.toPlanet}. Total Amount Paid: ${req.body.price}. Hope you have a safe journey!`,
       from: twilioPhoneNumber,
       to: req.body.phoneNumber,
     })

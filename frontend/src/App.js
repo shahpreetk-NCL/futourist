@@ -1,8 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import TravelOptions from "./pages/TravelOptions";
 import Payment from "./pages/Payment";
@@ -11,7 +7,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className="navbar bg-primary text-primary-content">
+        <div className="navbar glass p-4">
           <a
             href="/"
             aria-label="Welcome to Futourist"
