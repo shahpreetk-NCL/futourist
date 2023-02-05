@@ -1,68 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using [clean-cra Template](https://github.com/JorgePasco1/cra-template-clean-cra).
+# FuTuorist
 
-## Available Scripts
+FuTourist is a website to plan your trip to other planets in future. Using Futorists you can book tickets and fly to different planets around the Galaxy.
 
-In the project directory, you can run:
+## Table of Contents
+* [Title](#futourist)
+* [Description💻](#description💻)
+* [Inspiration💭](#inspiration💭)
+* [Tech Used⚒️](#tech-used⚒️)
+* [Challenges🪨](#challenges🪨)
+* [Accomplishments🏆](#accomplishments🏆)
+* [What we learned 📖](#what-we-learned-📖)
+* [Future Scope⏭️](#future-scope⏭️)
+* [Collaborators👥](#collaborators👥)
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Description💻
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+In this project we have built a website that allows everyone to choose which planets they want to travel between and on which date📅. Then it gives users an option to book for multiple people by selecting the number of people travelling. It provides the user with three spaceship options - one being the cheapest and longest journey, one a little faster, and the final option being a private spaceship. Users can then make a payment on the app and ask for the details being sent to them via SMS.
 
-### `npm test`
+## Inspiration💭
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+FuTourist is made in 2150 where travelling to any intergalactic planet is possible. Our inspiration for this was every *Marvel, DC Comics, Star Wars and Star Trek* movie ever made. The beauty of the space and the dream of becoming an astronaut as a child is what inspired us to make this hack for Hack for the Future. We imagine that in 2150 every human would be able to travel to space by easily booking through our site!🚀
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Used⚒️
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**Frontend:** React, Daisy UI (a Tailwind CSS plugin)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Backend:** Node.js, twilio for sending messages/booking details
 
-### `npm run eject`
+We used the Issues and PR feature of GitHub to divide the tasks into manageable chunks and push code periodically. We have also hosted the frontend on Github Pages. The sending details via SMS feature was possible thanks to Twilio.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Challenges🪨
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Integration of Twilio was difficult and gave quite a few errors in the beginning. While using useNavigate in react, it kept routing to the end of the new page.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Accomplishments🏆
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This is the first time we've ever used Twilio so we're glad we could get it up and connected. We also added the fire animation on to the spaceships by ourselves. That was fun to do.🔥
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## What we learned 📖
+We learned how to use Twilio and DaisyUI.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+## Future Scope⏭️
+1. Connecting the website to a payment gateway.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+2. Fixing the button bug.
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Collaborators👥
 
-### Advanced Configuration
+[Preet Shah](https://github.com/shahpreetk-NCL/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[Akanksha Tiwari](https://github.com/akai28)
