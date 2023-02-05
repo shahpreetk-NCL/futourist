@@ -11,12 +11,11 @@ function Home() {
   const [year, setYear] = useState(2150);
 
   const onSubmit = (e) => {
-    e.preventDefault();
-    localStorage.setItem("fromPlanet", fromPlanet);
-    localStorage.setItem("toPlanet", toPlanet);
-    localStorage.setItem("date", `${day} ${month} ${year}`);
-    navigate("/options");
-  };
+    localStorage.setItem('fromPlanet', fromPlanet);
+    localStorage.setItem('toPlanet', toPlanet);
+    localStorage.setItem('date', `${day} ${month} ${year}`);
+    navigate('/options');
+  }
 
   return (
     <>
@@ -145,11 +144,7 @@ function Home() {
           </div>
         </div>
         <div className="text-end mb-4">
-          <button
-            aria-label="Next Page"
-            onClick={onSubmit}
-            className="btn btn-secondary btn-md"
-          >
+          <button aria-label="Next Page" onClick={(e) => onSubmit(e)} className="btn btn-secondary btn-md">
             Next Page &nbsp; <span className="text-xl align-top">&#10148;</span>
           </button>
         </div>
