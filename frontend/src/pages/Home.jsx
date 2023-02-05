@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { planets } from "../data/planets.js";
 
 function Home() {
+  const navigate = useNavigate();
   const [fromPlanet, setFromPlanet] = useState(null);
   const [toPlanet, setToPlanet] = useState(null);
   const [day, setDay] = useState(1);
@@ -13,6 +15,7 @@ function Home() {
     localStorage.setItem("fromPlanet", fromPlanet);
     localStorage.setItem("toPlanet", toPlanet);
     localStorage.setItem("date", `${day} ${month} ${year}`);
+    navigate("/options");
   };
 
   return (
@@ -142,13 +145,13 @@ function Home() {
           </div>
         </div>
         <div className="text-end mb-4">
-          <a href="/options"
+          <button
             aria-label="Next Page"
             onClick={onSubmit}
             className="btn btn-secondary btn-md"
           >
             Next Page &nbsp; <span className="text-xl align-top">&#10148;</span>
-          </a>
+          </button>
         </div>
       </div>
     </>

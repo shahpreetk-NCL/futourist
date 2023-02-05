@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function TravelOptions() {
+  const navigate = useNavigate();
   const [flightName, setFlightName] = useState(null);
   const [firstName, setFirstName] = useState(null);
   const [lastName, setLastName] = useState(null);
@@ -21,6 +23,7 @@ function TravelOptions() {
     localStorage.setItem("time", time);
     localStorage.setItem("noOfPeople", noOfPeople);
     localStorage.setItem("price", price);
+    navigate("/payment");
   };
   return (
     <>
@@ -140,13 +143,13 @@ function TravelOptions() {
         </div>
         <div className="text-end mb-4">
           <h2 className="text-3xl my-6">Total Amount: {price} crypto coins</h2>
-          <a href="/payment"
+          <button
             aria-label="Next Page"
             onClick={onSubmit}
             className="btn btn-secondary btn-md"
           >
             Next Page &nbsp; <span className="text-xl align-top">&#10148;</span>
-          </a>
+          </button>
         </div>
       </div>
     </>
